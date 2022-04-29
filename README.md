@@ -1,3 +1,26 @@
+# nextjs-contentful-material
+
+# 🚀 Javascript full-stack 🚀
+
+### React / omdbapi.com API
+
+https://github.com/coding-to-music/nextjs-contentful-material
+
+https://nextjs-contentful-material.vercel.app
+
+https://nextjs-contentful-material.herokuapp.com
+
+by Steven Del Rosario https://github.com/stevendelro
+
+https://github.com/stevendelro/Portfolio
+
+## Environment Values
+
+```java
+
+  API_KEY: process.env.API_KEY,
+```
+
 ## Table of Contents
 
 - [About The Project](#project-history)
@@ -110,32 +133,32 @@ Here's a snippet from my NavCrumbs.js component:
 ```jsx
 useEffect(() => {
   // Handle first crumb, clean up second and third crumbs
-  if (route === '/') return setSecondCrumb(null)
-  if (route === '/work' || '/blog' || '/mail') {
-    setThirdCrumb(null)
-    createSecondLevelCrumb(route)
+  if (route === "/") return setSecondCrumb(null);
+  if (route === "/work" || "/blog" || "/mail") {
+    setThirdCrumb(null);
+    createSecondLevelCrumb(route);
   }
 
   // Handle second and third crumb for Blog routes
-  if (route === '/blog/[postDetails]') {
-    createSecondLevelCrumb(route)
-    let currentSlug = removeDashesAndUppercaseFirstLetter(query.postDetails)
+  if (route === "/blog/[postDetails]") {
+    createSecondLevelCrumb(route);
+    let currentSlug = removeDashesAndUppercaseFirstLetter(query.postDetails);
     if (thirdCrumb === null || currentSlug !== thirdCrumb) {
-      setThirdCrumb(truncate(currentSlug, 5))
+      setThirdCrumb(truncate(currentSlug, 5));
     }
   }
 
   // Handle second and third crumb for Work routes
-  if (route === '/work/[projectDetails]') {
-    createSecondLevelCrumb(route)
+  if (route === "/work/[projectDetails]") {
+    createSecondLevelCrumb(route);
     let currentProject = removeDashesAndUppercaseFirstLetter(
       query.projectDetails
-    )
+    );
     if (thirdCrumb === null || currentProject !== thirdCrumb) {
-      setThirdCrumb(truncate(currentProject, 5))
+      setThirdCrumb(truncate(currentProject, 5));
     }
   }
-}, [route, query])
+}, [route, query]);
 ```
 
 #### Using the Github API as a pseudo CMS to showcase my projects.
@@ -197,3 +220,39 @@ These resources helped me immensely while developing this project:
 - [Sirv](https://sirv.com/) - This was the image CDN hosting provider that I used to host images and gifs.
 - [TinyPNG](https://tinypng.com/) - Smart PNG and JPEG compression.
 - [SmartConverter](https://apps.apple.com/us/app/smart-converter/id447513724?mt=12) - The fastest, easiest to use video converter on the App Store
+
+## GitHub
+
+```java
+git init
+git add .
+git remote remove origin
+git commit -m "first commit"
+git branch -M main
+git remote add origin git@github.com:coding-to-music/nextjs-contentful-material.git
+git push -u origin main
+```
+
+## Heroku
+
+```java
+heroku create nextjs-contentful-material
+```
+
+## Heroku MongoDB Environment Variables
+
+```java
+heroku config:set
+
+heroku config:set MONGODB_URI="your value"
+```
+
+## Push to Heroku
+
+```java
+git push heroku
+
+# or
+
+npm run deploy
+```

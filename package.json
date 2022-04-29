@@ -1,12 +1,20 @@
 {
-  "name": "nextjs-contentful",
+  "name": "nextjs-contentful-material",
   "version": "1.0.0",
   "private": true,
+  "engines": {
+    "node": "16.x"
+  },
+  "cacheDirectories": [
+    "node_modules",
+    ".next/cache"
+  ],
   "scripts": {
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "setup": "node ./contentful/setup.js $CONTENTFUL_SPACE_ID $CONTENTFUL_MANAGEMENT_TOKEN"
+    "setup": "node ./contentful/setup.js $CONTENTFUL_SPACE_ID $CONTENTFUL_MANAGEMENT_TOKEN",
+    "deploy": "git add . && git commit -m Build && git push && git push heroku && heroku logs --tail --remote heroku"
   },
   "dependencies": {
     "@babel/core": "^7.15.0",
