@@ -2,8 +2,6 @@
 
 # 🚀 Javascript full-stack 🚀
 
-### React / omdbapi.com API
-
 https://github.com/coding-to-music/nextjs-contentful-material
 
 https://nextjs-contentful-material.vercel.app
@@ -19,6 +17,13 @@ https://github.com/stevendelro/Portfolio
 ```java
 npm WARN deprecated axios@0.20.0: Critical security vulnerability fixed in v0.21.1. For more information, see https://github.com/axios/axios/pull/3410
 npm WARN deprecated @octokit/auth@2.0.1: "@octokit/auth" is deprecated. Use the packages you need directly instead: "@octokit/auth-action", "@octokit/auth-app", "@octokit/auth-oauth-app", "@octokit/auth-token"
+```
+
+## Build Errors
+
+```java
+error - Error: {"sys":{"type":"Error","id":"InvalidQuery"},"message":"The query you sent was invalid. Probably a filter or ordering specification is not applicable to the type of a field.","details":{"errors":[{"name":"unknownContentType","value":"DOESNOTEXIST"}]},"requestId":"02111e61-9aed-49cd-8cc1-23a63893230d"}
+error - Error: {"sys":{"type":"Error","id":"InvalidQuery"},"message":"The query you sent was invalid. Probably a filter or ordering specification is not applicable to the type of a field.","details":{"errors":[{"name":"unknownContentType","value":"DOESNOTEXIST"}]},"requestId":"02111e61-9aed-49cd-8cc1-23a63893230d"}
 ```
 
 ## Environment Values
