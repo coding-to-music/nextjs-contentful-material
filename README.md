@@ -14,6 +14,13 @@ by Steven Del Rosario https://github.com/stevendelro
 
 https://github.com/stevendelro/Portfolio
 
+## Build Warnings
+
+```java
+npm WARN deprecated axios@0.20.0: Critical security vulnerability fixed in v0.21.1. For more information, see https://github.com/axios/axios/pull/3410
+npm WARN deprecated @octokit/auth@2.0.1: "@octokit/auth" is deprecated. Use the packages you need directly instead: "@octokit/auth-action", "@octokit/auth-app", "@octokit/auth-oauth-app", "@octokit/auth-token"
+```
+
 ## Environment Values
 
 ```java
@@ -27,7 +34,7 @@ space: process.env.CONTENTFUL_SPACE_ID,
 host: 'preview.contentful.com',
 
 username = process.env.GITHUB_USERNAME,
-authorization: process.env.GITHUB_ACCESS_TOKEN,
+authorization: process.env.GITHUB_ACCESS_TOKEN
 ```
 
 ## Contentful CLI
