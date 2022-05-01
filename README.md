@@ -17,8 +17,17 @@ https://github.com/stevendelro/Portfolio
 ## Environment Values
 
 ```java
+sgMail.setApiKey(process.env.SENDGRID_API_KEY)
 
-  API_KEY: process.env.API_KEY,
+if (secret !== process.env.CONTENTFUL_PREVIEW_SECRET || !slug) {
+accessToken: process.env.CONTENTFUL_PREVIEW_ACCESS_TOKEN,
+
+accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+space: process.env.CONTENTFUL_SPACE_ID,
+host: 'preview.contentful.com',
+
+username = process.env.GITHUB_USERNAME,
+authorization: process.env.GITHUB_ACCESS_TOKEN,
 ```
 
 ## Table of Contents
