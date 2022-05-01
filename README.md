@@ -30,6 +30,33 @@ username = process.env.GITHUB_USERNAME,
 authorization: process.env.GITHUB_ACCESS_TOKEN,
 ```
 
+## Contentful CLI
+
+```java
+npm install -g contentful-cli
+```
+
+```java
+contentful login
+```
+
+Output
+
+```java
+A browser window will open where you will log in (or sign up if you don’t have an account), authorize this CLI tool and paste your CMA token here:
+
+? Open a browser window now? Yes
+Unable to open your browser automatically. Please open the following URI in your browser:
+
+https://be.contentful.com/oauth/authorize?response_type=token&client_id=9f86a1d54f3d6f85c159468f5919d6e5d27716b3ed68fd01bd534e3dea2df864&redirect_uri=https://www.contentful.com/developers/cli-oauth-page/&scope=content_management_manage
+
+
+? Paste your token here: [hidden]
+
+Great! Your CMA token is now stored on your system. (Located at /home/tmc/.contentfulrc.json)
+You can always run contentful logout to remove it.
+```
+
 ## Table of Contents
 
 - [About The Project](#project-history)
